@@ -117,19 +117,19 @@ Se cargarán:
 ### 👤 **Users**
 - GET    /users
 - POST   /users
-- PATCH  /users/:id
+- PUT  /users/:id
 - DELETE /users/:id
 
 ### 🗂️ **Categories**
 - GET    /categories
 - POST   /categories
-- PATCH  /categories/:id
+- PUT  /categories/:id
 - DELETE /categories/:id
 
 ### 🛒 **Products**
 GET    /products
 POST   /products
-PATCH  /products/:id
+PUT  /products/:id
 DELETE /products/:id
 
 ### 🧾 **Orders**
