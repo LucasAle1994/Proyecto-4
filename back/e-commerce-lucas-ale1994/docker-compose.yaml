@@ -1,0 +1,25 @@
+# version: "3.8"
+
+services:
+  nestapp:
+    build: ./
+    ports:
+      - "3000:3005"
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=postgresdb
+      - PORT=3005 
+    depends_on:
+      - postgresdb
+  postgresdb:
+    image: "postgres:16"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
